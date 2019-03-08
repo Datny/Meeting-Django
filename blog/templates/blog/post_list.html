@@ -4,6 +4,7 @@
 {% block content %}
     {% for post in posts %}
         <div>Published: {{post.published_date}}
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
              <p>Author: {{post.author}}</p>
              <a href="">Title: {{post.title}}</a>
              <p>Text:{{post.text}}</p>
